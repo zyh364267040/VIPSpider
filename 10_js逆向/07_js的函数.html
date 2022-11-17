@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // function: 函数
+        // function f(形参1, 形参2, ...) {
+        //     函数体
+        //     也可以有return
+        // }
+
+        // function f(a, b) {
+        //     console.log('计算'+a+'加上'+b+'的结果')
+        //     return a+b
+        // }
+        //
+        // ret = f(10, 20)
+        // console.log('得到的运算结果是'+ret)
+
+        // var a = function () {
+        //     console.log('我叫周润发');
+        // }
+        //
+        // a()
+
+        // var $ = function (a) {
+        //     console.log('我接收到了一个函数'+a);
+        // }
+        //
+        // $('程咬金')
+
+        // 在前端:任何东西都可以(),任何东西必须得是函数
+        // 自运行函数
+        // (function (a, b) {
+        //     console.log('这也行'+a+'   '+b);
+        // })(10, 20)
+
+        c = (function () {
+            var m = {
+                name: 'alex',
+                age: 18,
+                xijiao: function (a) {
+                    console.log(a+'帮我洗脚')
+                }
+            }
+            return m
+        })()
+        console.log(c.name)
+        console.log(c.xijiao('章子怡'))
+    </script>
+</body>
+</html>

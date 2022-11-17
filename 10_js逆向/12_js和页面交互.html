@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        // function fn() {
+        //     console.log('你点我了!')
+        // }
+        // window.onload = function() {
+        //     let btu = document.getElementById('btn')
+        //     btu.addEventListener('click', function () {
+        //         console.log('你又点我了!!!')
+        //     })
+        // }
+        window.onload = function() {
+            let btn = document.getElementById('btn')
+            btn.addEventListener('click', function () {
+                document.getElementById('mydiv').innerText = '你点我了!'
+            })
+        }
+    </script>
+
+<!--    <input type="button" onclick="fn()" value="你点我啊!">-->
+    <input type="button" id="btn" value="你再来点我!!!">
+    <div id="mydiv" style="width: 100px; height: 100px; background-color: pink"></div>
+</body>
+</html>

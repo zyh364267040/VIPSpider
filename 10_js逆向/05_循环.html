@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // while循环
+        // var i = 1;
+        // while (i <= 10){
+        //     console.log(i);
+        //     i ++;
+        // }
+
+        // do..while
+        // var i = 1;
+        // do {
+        //     console.log(i);
+        //     i ++;
+        // } while (i <= 10);
+        // do..while 由于是先执行的循环体,所以,至少会执行一次循环体的内容,哪怕条件是假
+
+        // for循环
+        // for (初始化表达式; 条件表达式; 改变循环变量){
+        //     循环体
+        // }
+        /*
+        1. 初始化表达式
+        2. 判断条件 -> 当条件为假,循环结束
+        3. 执行循环体
+        4. 改变循环变量
+        5. 回到第二步
+         */
+        // for (var i = 1; i <= 10; i ++){
+        //     console.log(i);
+        // }
+        // 里面也可以使用 break 和 continue
+
+        // for的第二种写法
+        // var arr = [11, 22, 33, 44];
+        // for (var item in arr){  // 这样拿到的事索引,是数组下标
+        //     console.log(arr[item]);
+        // }
+
+        // var wangfeng = {
+        //     name: '汪峰',
+        //     age: 18,
+        //     wife: '章子怡'
+        // };
+        // for (var item in wangfeng){
+        //     console.log(wangfeng[item]);
+        // };
+
+        // 列表特有的一个方案
+        var arr = [11, 22, 33, 44];
+        arr.forEach(function (item) {  // 让arr中的每一个去执行一次里面的函数,把被循环的内容一个一个传递给函数
+            console.log(item)
+        })
+    </script>
+</body>
+</html>

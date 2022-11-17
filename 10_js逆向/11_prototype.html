@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 这就是一个类,对某一类食物的归纳总结
+        function Person(name, age) {
+            // 属性.this表示当前人
+            this.name = name;
+            this.age = age;
+            // 动作
+            this.chi = function (fan) {
+                console.log(this.name + '再吃' + fan);
+            }
+        }
+
+        Person.prototype.what = function(with_who){
+            console.log(this.name + '和' + with_who + '在干啥')
+        }
+
+        p1 = new Person('张无忌', 18);
+        p2 = new Person('赵敏', 16);
+        p2.chi('米饭')
+        p2.what('周芷若')
+
+        var time = new Date()
+        Date.prototype.format = function () {
+            // var now = new Date();
+            // console.log(now);
+            // 2021-10-30 19:34:45
+            var year = this.getYear();
+            var year = this.getFullYear();
+            var month = this.getMonth() + 1;
+            var date = this.getDate();
+            var hour = this.getHours();
+            var minutes = this.getMinutes();
+            var second = this.getSeconds();
+            return year + '-' + month + '-' + date + ' ' + hour + ':' + minutes + ':' + second
+        }
+
+        console.log(time.format())
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 假页面加载的时候
+        window.onload = function () {
+            document.getElementById('btn').addEventListener('click', function () {
+                // 清空提示信息
+                document.getElementById('username_info').innerText = '';
+                document.getElementById('password_info').innerText = '';
+
+                let username = document.getElementById('username').value;  // 获取username标签中的value属性
+                let password = document.getElementById('password').value;  // 获取密码
+
+                let flag = true;
+                if (!username){
+                    document.getElementById('username_info').innerText = '用户名不能为空';
+                    flag = false;
+                }
+                if (!password){
+                    document.getElementById('password_info').innerText = '密码不能为空';
+                    flag = false;
+                }
+
+                if (flag){
+                    document.getElementById('login_form').submit('www.baidu.com');
+                }
+            })
+        }
+    </script>
+
+    <form id="login_form">
+        <label for="username">用户名:</label><input type="text" name="username" id="username"><span id="username_info"></span><br>
+        <label for="password">密码:</label><input type="text" name="password" id="password"><span id="password_info"></span><br>
+        <input type="button" id="btn" value="登录">
+    </form>
+</body>
+</html>
